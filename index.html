@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Image Generator Pro</h1>
+        </div>
+        <div class="input-group">
+            <input type="text" id="promptInput" placeholder="Describe your image..." autocomplete="off">
+            <button class="button button-primary" onclick="generateImage()">Generate</button>
+            <button class="button button-secondary" id="regenerateButton" onclick="regenerateImage()" style="display: none;">Regenerate</button>
+        </div>
+        <div class="loader-container" id="loadingSpinner">
+            <div class="loader">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div id="errorMessage" class="error"></div>
+        <div class="image-container">
+            <img id="generatedImage" alt="Generated Image">
+        </div>
+        <div class="footer">
+            <button class="button button-primary" id="downloadButton" onclick="downloadImage()" style="display: none;">Download Image</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
